@@ -15,13 +15,11 @@
  *
  */
 
-package walkingkooka.tree.expression.function.string;
+package walkingkooka.tree.expression.function.engineering;
 
 import walkingkooka.collect.list.Lists;
 import walkingkooka.reflect.PublicStaticHelper;
-import walkingkooka.tree.expression.ExpressionNumber;
 import walkingkooka.tree.expression.function.ExpressionFunction;
-import walkingkooka.tree.expression.function.ExpressionFunctionContext;
 
 import java.util.function.Consumer;
 

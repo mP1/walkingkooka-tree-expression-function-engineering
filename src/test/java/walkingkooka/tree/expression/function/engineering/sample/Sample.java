@@ -15,12 +15,7 @@
  *
  */
 
-package walkingkooka.tree.expression.function.string.sample;
-
-import walkingkooka.Cast;
-import walkingkooka.Either;
-import walkingkooka.collect.list.Lists;
-import walkingkooka.tree.expression.function.FakeExpressionFunctionContext;
+package walkingkooka.tree.expression.function.engineering.sample;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

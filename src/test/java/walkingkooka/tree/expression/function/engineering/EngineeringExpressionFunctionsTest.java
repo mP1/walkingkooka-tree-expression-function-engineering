@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  */
-package walkingkooka.tree.expression.function.string;
+package walkingkooka.tree.expression.function.engineering;
 
 import org.junit.jupiter.api.Test;
 import walkingkooka.collect.set.Sets;

@@ -19,7 +19,9 @@ package walkingkooka.tree.expression.function.engineering;
 
 import walkingkooka.collect.list.Lists;
 import walkingkooka.reflect.PublicStaticHelper;
+import walkingkooka.tree.expression.ExpressionNumber;
 import walkingkooka.tree.expression.function.ExpressionFunction;
+import walkingkooka.tree.expression.function.ExpressionFunctionContext;
 
 import java.util.function.Consumer;
 
@@ -32,8 +34,33 @@ public final class EngineeringExpressionFunctions implements PublicStaticHelper 
      * Visit all {@link ExpressionFunction functions}.
      */
     public static void visit(final Consumer<ExpressionFunction<?, ?>> consumer) {
-        Lists.<ExpressionFunction<?, ?>>of()
+        Lists.of(
+                        bitAnd(),
+                        bitOr(),
+                        bitXor()
+                )
                 .forEach(consumer);
+    }
+
+    /**
+     * {@see NumberExpressionFunctionBitAndOrXor#bitAnd}
+     */
+    public static <C extends ExpressionFunctionContext> ExpressionFunction<ExpressionNumber, C> bitAnd() {
+        return NumberExpressionFunctionBitAndOrXor.bitAnd();
+    }
+
+    /**
+     * {@see NumberExpressionFunctionBitAndOrXor#bitOr}
+     */
+    public static <C extends ExpressionFunctionContext> ExpressionFunction<ExpressionNumber, C> bitOr() {
+        return NumberExpressionFunctionBitAndOrXor.bitOr();
+    }
+
+    /**
+     * {@see NumberExpressionFunctionBitAndOrXor#bitXor}
+     */
+    public static <C extends ExpressionFunctionContext> ExpressionFunction<ExpressionNumber, C> bitXor() {
+        return NumberExpressionFunctionBitAndOrXor.bitXor();
     }
 
     /**

@@ -16,6 +16,8 @@ A collection of ExpressionFunction(s) often categories as excel engineering func
 
 Many more functions are outstanding and remain TODO.
 
-- date(year, month, day)
+- bitAnd(number, number)
+- bitOr(number, number)
+- bitXor(number, number)
 
 [TODO](https://github.com/mP1/walkingkooka-tree-expression-function-engineering/issues)

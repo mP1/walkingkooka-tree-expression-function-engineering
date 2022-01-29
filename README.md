@@ -16,8 +16,17 @@ A collection of ExpressionFunction(s) often categories as excel engineering func
 
 Many more functions are outstanding and remain TODO.
 
+- bin2dec(string)
+- bin2hex(string)
+- bin2oct(string)
 - bitAnd(number, number)
 - bitOr(number, number)
 - bitXor(number, number)
+- hex2bin(string)
+- hex2dec(string)
+- hex2oct(string)
+- oct2bin(string)
+- oct2dec(string)
+- oct2hex(string)
 
 [TODO](https://github.com/mP1/walkingkooka-tree-expression-function-engineering/issues)

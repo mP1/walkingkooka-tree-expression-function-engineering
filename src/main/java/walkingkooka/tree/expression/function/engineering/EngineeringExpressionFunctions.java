@@ -35,11 +35,44 @@ public final class EngineeringExpressionFunctions implements PublicStaticHelper 
      */
     public static void visit(final Consumer<ExpressionFunction<?, ?>> consumer) {
         Lists.of(
+                        bin2dec(),
+                        bin2hex(),
+                        bin2oct(),
                         bitAnd(),
                         bitOr(),
-                        bitXor()
+                        bitXor(),
+                        dec2bin(),
+                        dec2hex(),
+                        dec2oct(),
+                        hex2bin(),
+                        hex2dec(),
+                        hex2oct(),
+                        oct2bin(),
+                        oct2dec(),
+                        oct2hex()
                 )
                 .forEach(consumer);
+    }
+
+    /**
+     * {@see StringExpressionFunctionParseBase2Base#bin2dec}
+     */
+    public static <C extends ExpressionFunctionContext> ExpressionFunction<String, C> bin2dec() {
+        return StringExpressionFunctionParseBase2Base.bin2dec();
+    }
+
+    /**
+     * {@see StringExpressionFunctionParseBase2Base#bin2hex}
+     */
+    public static <C extends ExpressionFunctionContext> ExpressionFunction<String, C> bin2hex() {
+        return StringExpressionFunctionParseBase2Base.bin2hex();
+    }
+
+    /**
+     * {@see StringExpressionFunctionParseBase2Base#bin2oct}
+     */
+    public static <C extends ExpressionFunctionContext> ExpressionFunction<String, C> bin2oct() {
+        return StringExpressionFunctionParseBase2Base.bin2oct();
     }
 
     /**
@@ -61,6 +94,69 @@ public final class EngineeringExpressionFunctions implements PublicStaticHelper 
      */
     public static <C extends ExpressionFunctionContext> ExpressionFunction<ExpressionNumber, C> bitXor() {
         return NumberExpressionFunctionBitAndOrXor.bitXor();
+    }
+
+    /**
+     * {@see StringExpressionFunctionParseBase2Base#dec2bin}
+     */
+    public static <C extends ExpressionFunctionContext> ExpressionFunction<String, C> dec2bin() {
+        return StringExpressionFunctionParseBase2Base.dec2bin();
+    }
+
+    /**
+     * {@see StringExpressionFunctionParseBase2Base#dec2hex}
+     */
+    public static <C extends ExpressionFunctionContext> ExpressionFunction<String, C> dec2hex() {
+        return StringExpressionFunctionParseBase2Base.dec2hex();
+    }
+
+    /**
+     * {@see StringExpressionFunctionParseBase2Base#dec2oct}
+     */
+    public static <C extends ExpressionFunctionContext> ExpressionFunction<String, C> dec2oct() {
+        return StringExpressionFunctionParseBase2Base.dec2oct();
+    }
+
+    /**
+     * {@see StringExpressionFunctionParseBase2Base#hex2bin}
+     */
+    public static <C extends ExpressionFunctionContext> ExpressionFunction<String, C> hex2bin() {
+        return StringExpressionFunctionParseBase2Base.hex2bin();
+    }
+
+    /**
+     * {@see StringExpressionFunctionParseBase2Base#hex2dec}
+     */
+    public static <C extends ExpressionFunctionContext> ExpressionFunction<String, C> hex2dec() {
+        return StringExpressionFunctionParseBase2Base.hex2dec();
+    }
+
+    /**
+     * {@see StringExpressionFunctionParseBase2Base#hex2oct}
+     */
+    public static <C extends ExpressionFunctionContext> ExpressionFunction<String, C> hex2oct() {
+        return StringExpressionFunctionParseBase2Base.hex2oct();
+    }
+
+    /**
+     * {@see StringExpressionFunctionParseBase2Base#oct2bin}
+     */
+    public static <C extends ExpressionFunctionContext> ExpressionFunction<String, C> oct2bin() {
+        return StringExpressionFunctionParseBase2Base.oct2bin();
+    }
+
+    /**
+     * {@see StringExpressionFunctionParseBase2Base#oct2dec}
+     */
+    public static <C extends ExpressionFunctionContext> ExpressionFunction<String, C> oct2dec() {
+        return StringExpressionFunctionParseBase2Base.oct2dec();
+    }
+
+    /**
+     * {@see StringExpressionFunctionParseBase2Base#oct2hex}
+     */
+    public static <C extends ExpressionFunctionContext> ExpressionFunction<String, C> oct2hex() {
+        return StringExpressionFunctionParseBase2Base.oct2hex();
     }
 
     /**

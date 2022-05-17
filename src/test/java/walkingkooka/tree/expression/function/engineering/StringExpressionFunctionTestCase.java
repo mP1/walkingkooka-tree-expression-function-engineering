@@ -67,6 +67,11 @@ public abstract class StringExpressionFunctionTestCase<F extends ExpressionFunct
             }
 
             @Override
+            public char decimalSeparator() {
+                return '.';
+            }
+
+            @Override
             public char negativeSign() {
                 return '-';
             }

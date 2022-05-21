@@ -20,12 +20,12 @@ package walkingkooka.tree.expression.function.engineering;
 import walkingkooka.Cast;
 import walkingkooka.reflect.ClassTesting;
 import walkingkooka.reflect.JavaVisibility;
-import walkingkooka.tree.expression.function.FakeExpressionFunctionContext;
+import walkingkooka.tree.expression.FakeExpressionEvaluationContext;
 
-public final class StringExpressionFunctionTest implements ClassTesting<StringExpressionFunction<FakeExpressionFunctionContext>> {
+public final class StringExpressionFunctionTest implements ClassTesting<StringExpressionFunction<FakeExpressionEvaluationContext>> {
 
     @Override
-    public Class<StringExpressionFunction<FakeExpressionFunctionContext>> type() {
+    public Class<StringExpressionFunction<FakeExpressionEvaluationContext>> type() {
         return Cast.to(StringExpressionFunction.class);
     }
 

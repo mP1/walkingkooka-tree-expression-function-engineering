@@ -17,16 +17,16 @@
 
 package walkingkooka.tree.expression.function.engineering;
 
+import walkingkooka.tree.expression.ExpressionEvaluationContext;
 import walkingkooka.tree.expression.ExpressionNumber;
 import walkingkooka.tree.expression.ExpressionNumberKind;
+import walkingkooka.tree.expression.FakeExpressionEvaluationContext;
 import walkingkooka.tree.expression.function.ExpressionFunction;
-import walkingkooka.tree.expression.function.ExpressionFunctionContext;
-import walkingkooka.tree.expression.function.FakeExpressionFunctionContext;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-public abstract class NumberExpressionFunctionTestCase<F extends ExpressionFunction<ExpressionNumber, ExpressionFunctionContext>> extends ExpressionFunctionTestCase<F, ExpressionNumber> {
+public abstract class NumberExpressionFunctionTestCase<F extends ExpressionFunction<ExpressionNumber, ExpressionEvaluationContext>> extends ExpressionFunctionTestCase<F, ExpressionNumber> {
 
     final static ExpressionNumberKind KIND = ExpressionNumberKind.DEFAULT;
 
@@ -56,8 +56,8 @@ public abstract class NumberExpressionFunctionTestCase<F extends ExpressionFunct
     }
 
     @Override
-    public final ExpressionFunctionContext createContext() {
-        return new FakeExpressionFunctionContext() {
+    public final ExpressionEvaluationContext createContext() {
+        return new FakeExpressionEvaluationContext() {
             @Override
             public ExpressionNumberKind expressionNumberKind() {
                 return KIND;

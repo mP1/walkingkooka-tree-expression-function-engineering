@@ -19,21 +19,21 @@ package walkingkooka.tree.expression.function.engineering;
 
 import walkingkooka.Cast;
 import walkingkooka.collect.list.Lists;
+import walkingkooka.tree.expression.ExpressionEvaluationContext;
 import walkingkooka.tree.expression.ExpressionNumber;
 import walkingkooka.tree.expression.ExpressionNumberKind;
-import walkingkooka.tree.expression.function.ExpressionFunctionContext;
 import walkingkooka.tree.expression.function.ExpressionFunctionParameter;
 import walkingkooka.tree.expression.function.ExpressionFunctionParameterName;
 
 import java.util.List;
 
-final class StringExpressionFunctionParseBase2Base<C extends ExpressionFunctionContext> extends StringExpressionFunction<C> {
+final class StringExpressionFunctionParseBase2Base<C extends ExpressionEvaluationContext> extends StringExpressionFunction<C> {
 
     // BIN2.............................................................................................................
 
     // https://exceljet.net/excel-functions/excel-bin2dec-function
 
-    static <C extends ExpressionFunctionContext> StringExpressionFunctionParseBase2Base<C> bin2dec() {
+    static <C extends ExpressionEvaluationContext> StringExpressionFunctionParseBase2Base<C> bin2dec() {
         return Cast.to(BIN2DEC);
     }
 
@@ -41,7 +41,7 @@ final class StringExpressionFunctionParseBase2Base<C extends ExpressionFunctionC
 
     // https://exceljet.net/excel-functions/excel-bin2hex-function
 
-    static <C extends ExpressionFunctionContext> StringExpressionFunctionParseBase2Base<C> bin2hex() {
+    static <C extends ExpressionEvaluationContext> StringExpressionFunctionParseBase2Base<C> bin2hex() {
         return Cast.to(BIN2HEX);
     }
 
@@ -49,7 +49,7 @@ final class StringExpressionFunctionParseBase2Base<C extends ExpressionFunctionC
 
     // https://exceljet.net/excel-functions/excel-bin2oct-function
 
-    static <C extends ExpressionFunctionContext> StringExpressionFunctionParseBase2Base<C> bin2oct() {
+    static <C extends ExpressionEvaluationContext> StringExpressionFunctionParseBase2Base<C> bin2oct() {
         return Cast.to(BIN2OCT);
     }
 
@@ -59,7 +59,7 @@ final class StringExpressionFunctionParseBase2Base<C extends ExpressionFunctionC
 
     // https://exceljet.net/excel-functions/excel-dec2bin-function
 
-    static <C extends ExpressionFunctionContext> StringExpressionFunctionParseBase2Base<C> dec2bin() {
+    static <C extends ExpressionEvaluationContext> StringExpressionFunctionParseBase2Base<C> dec2bin() {
         return Cast.to(DEC2BIN);
     }
 
@@ -67,7 +67,7 @@ final class StringExpressionFunctionParseBase2Base<C extends ExpressionFunctionC
 
     // https://exceljet.net/excel-functions/excel-dec2hex-function
 
-    static <C extends ExpressionFunctionContext> StringExpressionFunctionParseBase2Base<C> dec2hex() {
+    static <C extends ExpressionEvaluationContext> StringExpressionFunctionParseBase2Base<C> dec2hex() {
         return Cast.to(DEC2HEX);
     }
 
@@ -75,7 +75,7 @@ final class StringExpressionFunctionParseBase2Base<C extends ExpressionFunctionC
 
     // https://exceljet.net/excel-functions/excel-dec2oct-function
 
-    static <C extends ExpressionFunctionContext> StringExpressionFunctionParseBase2Base<C> dec2oct() {
+    static <C extends ExpressionEvaluationContext> StringExpressionFunctionParseBase2Base<C> dec2oct() {
         return Cast.to(DEC2OCT);
     }
 
@@ -85,7 +85,7 @@ final class StringExpressionFunctionParseBase2Base<C extends ExpressionFunctionC
 
     // https://exceljet.net/excel-functions/excel-hex2bin-function
 
-    static <C extends ExpressionFunctionContext> StringExpressionFunctionParseBase2Base<C> hex2bin() {
+    static <C extends ExpressionEvaluationContext> StringExpressionFunctionParseBase2Base<C> hex2bin() {
         return Cast.to(HEX2BIN);
     }
 
@@ -93,7 +93,7 @@ final class StringExpressionFunctionParseBase2Base<C extends ExpressionFunctionC
 
     // https://exceljet.net/excel-functions/excel-hex2dec-function
 
-    static <C extends ExpressionFunctionContext> StringExpressionFunctionParseBase2Base<C> hex2dec() {
+    static <C extends ExpressionEvaluationContext> StringExpressionFunctionParseBase2Base<C> hex2dec() {
         return Cast.to(HEX2DEC);
     }
 
@@ -101,7 +101,7 @@ final class StringExpressionFunctionParseBase2Base<C extends ExpressionFunctionC
 
     // https://exceljet.net/excel-functions/excel-hex2oct-function
 
-    static <C extends ExpressionFunctionContext> StringExpressionFunctionParseBase2Base<C> hex2oct() {
+    static <C extends ExpressionEvaluationContext> StringExpressionFunctionParseBase2Base<C> hex2oct() {
         return Cast.to(HEX2OCT);
     }
 
@@ -109,19 +109,19 @@ final class StringExpressionFunctionParseBase2Base<C extends ExpressionFunctionC
 
     // OCT2.............................................................................................................
 
-    static <C extends ExpressionFunctionContext> StringExpressionFunctionParseBase2Base<C> oct2bin() {
+    static <C extends ExpressionEvaluationContext> StringExpressionFunctionParseBase2Base<C> oct2bin() {
         return Cast.to(OCT2BIN);
     }
 
     private final static StringExpressionFunctionParseBase2Base<?> OCT2BIN = new StringExpressionFunctionParseBase2Base<>("oct2bin", 8, 2);
 
-    static <C extends ExpressionFunctionContext> StringExpressionFunctionParseBase2Base<C> oct2dec() {
+    static <C extends ExpressionEvaluationContext> StringExpressionFunctionParseBase2Base<C> oct2dec() {
         return Cast.to(OCT2DEC);
     }
 
     private final static StringExpressionFunctionParseBase2Base<?> OCT2DEC = new StringExpressionFunctionParseBase2Base<>("oct2dec", 8, 10);
 
-    static <C extends ExpressionFunctionContext> StringExpressionFunctionParseBase2Base<C> oct2hex() {
+    static <C extends ExpressionEvaluationContext> StringExpressionFunctionParseBase2Base<C> oct2hex() {
         return Cast.to(OCT2HEX);
     }
 

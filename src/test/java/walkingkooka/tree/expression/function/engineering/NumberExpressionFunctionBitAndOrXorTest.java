@@ -20,9 +20,9 @@ package walkingkooka.tree.expression.function.engineering;
 import org.junit.jupiter.api.Test;
 import walkingkooka.Cast;
 import walkingkooka.collect.list.Lists;
-import walkingkooka.tree.expression.function.ExpressionFunctionContext;
+import walkingkooka.tree.expression.ExpressionEvaluationContext;
 
-public final class NumberExpressionFunctionBitAndOrXorTest extends NumberExpressionFunctionTestCase<NumberExpressionFunctionBitAndOrXor<ExpressionFunctionContext>> {
+public final class NumberExpressionFunctionBitAndOrXorTest extends NumberExpressionFunctionTestCase<NumberExpressionFunctionBitAndOrXor<ExpressionEvaluationContext>> {
 
     // bitAnd........................................................................................................
 
@@ -118,7 +118,7 @@ public final class NumberExpressionFunctionBitAndOrXorTest extends NumberExpress
     }
     // helper...........................................................................................................
 
-    private void applyAndCheck3(final NumberExpressionFunctionBitAndOrXor<ExpressionFunctionContext> function,
+    private void applyAndCheck3(final NumberExpressionFunctionBitAndOrXor<ExpressionEvaluationContext> function,
                                 final Number value1,
                                 final Number value2,
                                 final Number expected) {
@@ -160,12 +160,12 @@ public final class NumberExpressionFunctionBitAndOrXorTest extends NumberExpress
     }
 
     @Override
-    public NumberExpressionFunctionBitAndOrXor<ExpressionFunctionContext> createBiFunction() {
+    public NumberExpressionFunctionBitAndOrXor<ExpressionEvaluationContext> createBiFunction() {
         return NumberExpressionFunctionBitAndOrXor.bitAnd();
     }
 
     @Override
-    public Class<NumberExpressionFunctionBitAndOrXor<ExpressionFunctionContext>> type() {
+    public Class<NumberExpressionFunctionBitAndOrXor<ExpressionEvaluationContext>> type() {
         return Cast.to(NumberExpressionFunctionBitAndOrXor.class);
     }
 }

@@ -20,9 +20,9 @@ package walkingkooka.tree.expression.function.engineering;
 import org.junit.jupiter.api.Test;
 import walkingkooka.Cast;
 import walkingkooka.collect.list.Lists;
-import walkingkooka.tree.expression.function.ExpressionFunctionContext;
+import walkingkooka.tree.expression.ExpressionEvaluationContext;
 
-public final class StringExpressionFunctionParseBase2BaseTest extends StringExpressionFunctionTestCase<StringExpressionFunctionParseBase2Base<ExpressionFunctionContext>> {
+public final class StringExpressionFunctionParseBase2BaseTest extends StringExpressionFunctionTestCase<StringExpressionFunctionParseBase2Base<ExpressionEvaluationContext>> {
 
     // apply............................................................................................................
 
@@ -141,7 +141,7 @@ public final class StringExpressionFunctionParseBase2BaseTest extends StringExpr
         );
     }
 
-    private void applyAndCheck3(final StringExpressionFunctionParseBase2Base<ExpressionFunctionContext> function,
+    private void applyAndCheck3(final StringExpressionFunctionParseBase2Base<ExpressionEvaluationContext> function,
                                 final String from,
                                 final String result) {
         this.applyAndCheck3(
@@ -208,9 +208,9 @@ public final class StringExpressionFunctionParseBase2BaseTest extends StringExpr
     }
 
     private void roundtripAndCheck(final String value,
-                                   final StringExpressionFunctionParseBase2Base<ExpressionFunctionContext> from,
-                                   final StringExpressionFunctionParseBase2Base<ExpressionFunctionContext> to) {
-        final ExpressionFunctionContext context = this.createContext();
+                                   final StringExpressionFunctionParseBase2Base<ExpressionEvaluationContext> from,
+                                   final StringExpressionFunctionParseBase2Base<ExpressionEvaluationContext> to) {
+        final ExpressionEvaluationContext context = this.createContext();
 
         this.checkEquals(
                 value,
@@ -322,12 +322,12 @@ public final class StringExpressionFunctionParseBase2BaseTest extends StringExpr
     // classTesting....................................................................................................
 
     @Override
-    public StringExpressionFunctionParseBase2Base<ExpressionFunctionContext> createBiFunction() {
+    public StringExpressionFunctionParseBase2Base<ExpressionEvaluationContext> createBiFunction() {
         return StringExpressionFunctionParseBase2Base.bin2dec();
     }
 
     @Override
-    public Class<StringExpressionFunctionParseBase2Base<ExpressionFunctionContext>> type() {
+    public Class<StringExpressionFunctionParseBase2Base<ExpressionEvaluationContext>> type() {
         return Cast.to(StringExpressionFunctionParseBase2Base.class);
     }
 }

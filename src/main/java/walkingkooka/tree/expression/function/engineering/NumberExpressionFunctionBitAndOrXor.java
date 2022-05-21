@@ -19,8 +19,8 @@ package walkingkooka.tree.expression.function.engineering;
 
 import walkingkooka.Cast;
 import walkingkooka.collect.list.Lists;
+import walkingkooka.tree.expression.ExpressionEvaluationContext;
 import walkingkooka.tree.expression.ExpressionNumber;
-import walkingkooka.tree.expression.function.ExpressionFunctionContext;
 import walkingkooka.tree.expression.function.ExpressionFunctionParameter;
 import walkingkooka.tree.expression.function.ExpressionFunctionParameterName;
 
@@ -37,12 +37,12 @@ import java.util.function.BiFunction;
  * <br>
  * https://exceljet.net/excel-functions/excel-bitxor-function
  */
-final class NumberExpressionFunctionBitAndOrXor<C extends ExpressionFunctionContext> extends NumberExpressionFunction<C> {
+final class NumberExpressionFunctionBitAndOrXor<C extends ExpressionEvaluationContext> extends NumberExpressionFunction<C> {
 
     /**
      * BITAND getter.
      */
-    static <C extends ExpressionFunctionContext> NumberExpressionFunctionBitAndOrXor<C> bitAnd() {
+    static <C extends ExpressionEvaluationContext> NumberExpressionFunctionBitAndOrXor<C> bitAnd() {
         return Cast.to(BITAND);
     }
 
@@ -57,7 +57,7 @@ final class NumberExpressionFunctionBitAndOrXor<C extends ExpressionFunctionCont
     /**
      * BITOR getter.
      */
-    static <C extends ExpressionFunctionContext> NumberExpressionFunctionBitAndOrXor<C> bitOr() {
+    static <C extends ExpressionEvaluationContext> NumberExpressionFunctionBitAndOrXor<C> bitOr() {
         return Cast.to(BITOR);
     }
 
@@ -72,7 +72,7 @@ final class NumberExpressionFunctionBitAndOrXor<C extends ExpressionFunctionCont
     /**
      * BITXOR getter.
      */
-    static <C extends ExpressionFunctionContext> NumberExpressionFunctionBitAndOrXor<C> bitXor() {
+    static <C extends ExpressionEvaluationContext> NumberExpressionFunctionBitAndOrXor<C> bitXor() {
         return Cast.to(BITXOR);
     }
 

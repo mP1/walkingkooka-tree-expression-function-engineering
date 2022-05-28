@@ -25,6 +25,7 @@ Many more functions are outstanding and remain TODO.
 - dec2bin(string)
 - dec2hex(string)
 - dec2oct(string)
+- delta(number, number)
 - hex2bin(string)
 - hex2dec(string)
 - hex2oct(string)

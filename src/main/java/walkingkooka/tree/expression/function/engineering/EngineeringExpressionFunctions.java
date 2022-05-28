@@ -44,6 +44,7 @@ public final class EngineeringExpressionFunctions implements PublicStaticHelper 
                         dec2bin(),
                         dec2hex(),
                         dec2oct(),
+                        delta(),
                         hex2bin(),
                         hex2dec(),
                         hex2oct(),
@@ -115,6 +116,13 @@ public final class EngineeringExpressionFunctions implements PublicStaticHelper 
      */
     public static <C extends ExpressionEvaluationContext> ExpressionFunction<String, C> dec2oct() {
         return StringExpressionFunctionParseBase2Base.dec2oct();
+    }
+
+    /**
+     * {@see BooleanExpressionFunctionDelta#instance}
+     */
+    public static <C extends ExpressionEvaluationContext> ExpressionFunction<Boolean, C> delta() {
+        return BooleanExpressionFunctionDelta.instance();
     }
 
     /**

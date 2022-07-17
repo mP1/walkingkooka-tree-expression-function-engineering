@@ -113,7 +113,7 @@ final class NumberExpressionFunctionBitAndOrXor<C extends ExpressionEvaluationCo
             .required(ExpressionNumber.class);
 
     @Override
-    public List<ExpressionFunctionParameter<?>> parameters() {
+    public List<ExpressionFunctionParameter<?>> parameters(final int count) {
         return PARAMETERS;
     }
 

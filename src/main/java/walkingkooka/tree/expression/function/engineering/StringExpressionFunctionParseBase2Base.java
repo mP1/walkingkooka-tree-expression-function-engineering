@@ -146,7 +146,7 @@ final class StringExpressionFunctionParseBase2Base<C extends ExpressionEvaluatio
 
     private final static ExpressionFunctionParameter<String> FROM = ExpressionFunctionParameterName.with("from")
             .required(String.class)
-            .setKinds(ExpressionFunctionParameterKind.CONVERT_EVALUATE_FLATTEN_RESOLVE_REFERENCES);
+            .setKinds(ExpressionFunctionParameterKind.CONVERT_EVALUATE_RESOLVE_REFERENCES);
 
     private final static List<ExpressionFunctionParameter<?>> PARAMETERS = Lists.of(
             FROM

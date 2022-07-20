@@ -23,6 +23,7 @@ import walkingkooka.tree.expression.ExpressionEvaluationContext;
 import walkingkooka.tree.expression.ExpressionNumber;
 import walkingkooka.tree.expression.ExpressionNumberKind;
 import walkingkooka.tree.expression.function.ExpressionFunctionParameter;
+import walkingkooka.tree.expression.function.ExpressionFunctionParameterKind;
 import walkingkooka.tree.expression.function.ExpressionFunctionParameterName;
 
 import java.util.List;
@@ -144,7 +145,8 @@ final class StringExpressionFunctionParseBase2Base<C extends ExpressionEvaluatio
     }
 
     private final static ExpressionFunctionParameter<String> FROM = ExpressionFunctionParameterName.with("from")
-            .required(String.class);
+            .required(String.class)
+            .setKinds(ExpressionFunctionParameterKind.CONVERT_EVALUATE_FLATTEN_RESOLVE_REFERENCES);
 
     private final static List<ExpressionFunctionParameter<?>> PARAMETERS = Lists.of(
             FROM

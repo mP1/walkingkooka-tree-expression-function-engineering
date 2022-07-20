@@ -22,6 +22,7 @@ import walkingkooka.collect.list.Lists;
 import walkingkooka.tree.expression.ExpressionEvaluationContext;
 import walkingkooka.tree.expression.ExpressionNumber;
 import walkingkooka.tree.expression.function.ExpressionFunctionParameter;
+import walkingkooka.tree.expression.function.ExpressionFunctionParameterKind;
 import walkingkooka.tree.expression.function.ExpressionFunctionParameterName;
 
 import java.util.List;
@@ -106,11 +107,13 @@ final class NumberExpressionFunctionBitAndOrXor<C extends ExpressionEvaluationCo
 
     private final BiFunction<ExpressionNumber, ExpressionNumber, ExpressionNumber> function;
 
-    private final static  ExpressionFunctionParameter<ExpressionNumber> NUMBER1 = ExpressionFunctionParameterName.with("number1")
-            .required(ExpressionNumber.class);
+    private final static ExpressionFunctionParameter<ExpressionNumber> NUMBER1 = ExpressionFunctionParameterName.with("number1")
+            .required(ExpressionNumber.class)
+            .setKinds(ExpressionFunctionParameterKind.CONVERT_EVALUATE_FLATTEN_RESOLVE_REFERENCES);
 
-    private final static  ExpressionFunctionParameter<ExpressionNumber> NUMBER2 = ExpressionFunctionParameterName.with("number2")
-            .required(ExpressionNumber.class);
+    private final static ExpressionFunctionParameter<ExpressionNumber> NUMBER2 = ExpressionFunctionParameterName.with("number2")
+            .required(ExpressionNumber.class)
+            .setKinds(ExpressionFunctionParameterKind.CONVERT_EVALUATE_FLATTEN_RESOLVE_REFERENCES);
 
     @Override
     public List<ExpressionFunctionParameter<?>> parameters(final int count) {

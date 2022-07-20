@@ -27,10 +27,7 @@ import walkingkooka.tree.expression.ExpressionPurityContext;
 import walkingkooka.tree.expression.ExpressionPurityTesting;
 import walkingkooka.tree.expression.FunctionExpressionName;
 import walkingkooka.tree.expression.function.ExpressionFunction;
-import walkingkooka.tree.expression.function.ExpressionFunctionKind;
 import walkingkooka.tree.expression.function.ExpressionFunctionTesting;
-
-import java.util.EnumSet;
 
 public abstract class ExpressionFunctionTestCase<F extends ExpressionFunction<T, ExpressionEvaluationContext>, T> implements ExpressionFunctionTesting<F, T, ExpressionEvaluationContext>,
         ExpressionPurityTesting,
@@ -52,18 +49,6 @@ public abstract class ExpressionFunctionTestCase<F extends ExpressionFunction<T,
                     }
                 },
                 true
-        );
-    }
-
-    @Test
-    public final void testKind() {
-        this.checkEquals(
-                EnumSet.of(
-                        ExpressionFunctionKind.CONVERT_PARAMETERS,
-                        ExpressionFunctionKind.EVALUATE_PARAMETERS,
-                        ExpressionFunctionKind.RESOLVE_REFERENCES
-                ),
-                this.createBiFunction().kinds()
         );
     }
 

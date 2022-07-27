@@ -165,6 +165,11 @@ public final class NumberExpressionFunctionBitAndOrXorTest extends NumberExpress
     }
 
     @Override
+    public int minimumParameterCount() {
+        return 2;
+    }
+
+    @Override
     public Class<NumberExpressionFunctionBitAndOrXor<ExpressionEvaluationContext>> type() {
         return Cast.to(NumberExpressionFunctionBitAndOrXor.class);
     }

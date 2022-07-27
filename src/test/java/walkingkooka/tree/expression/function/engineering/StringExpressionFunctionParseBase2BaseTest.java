@@ -327,6 +327,11 @@ public final class StringExpressionFunctionParseBase2BaseTest extends StringExpr
     }
 
     @Override
+    public int minimumParameterCount() {
+        return 1;
+    }
+
+    @Override
     public Class<StringExpressionFunctionParseBase2Base<ExpressionEvaluationContext>> type() {
         return Cast.to(StringExpressionFunctionParseBase2Base.class);
     }

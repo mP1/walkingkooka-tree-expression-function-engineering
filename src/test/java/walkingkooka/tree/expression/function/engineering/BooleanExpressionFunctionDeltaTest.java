@@ -78,6 +78,11 @@ public final class BooleanExpressionFunctionDeltaTest extends BooleanExpressionF
     }
 
     @Override
+    public int minimumParameterCount() {
+        return 2;
+    }
+
+    @Override
     public Class<BooleanExpressionFunctionDelta<ExpressionEvaluationContext>> type() {
         return Cast.to(BooleanExpressionFunctionDelta.class);
     }

@@ -34,7 +34,7 @@ public final class EngineeringExpressionFunctionsTest implements PublicStaticHel
     @Test
     public void testVisit() {
         final Set<FunctionExpressionName> names = Sets.sorted();
-        EngineeringExpressionFunctions.visit((e) -> names.add(e.name()));
+        EngineeringExpressionFunctions.visit((e) -> names.add(e.name().get()));
 
         this.checkEquals(
                 Arrays.stream(EngineeringExpressionFunctions.class.getDeclaredMethods())

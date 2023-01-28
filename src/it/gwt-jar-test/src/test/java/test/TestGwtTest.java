@@ -15,9 +15,10 @@
  *
  */
 
-package walkingkooka.tree.expression.function.engineering.sample;
+package test;
 
-import org.junit.jupiter.api.Assertions;
+import com.google.gwt.junit.client.GWTTestCase;
+
 import walkingkooka.collect.list.Lists;
 import walkingkooka.tree.expression.ExpressionNumberKind;
 import walkingkooka.tree.expression.FakeExpressionEvaluationContext;
@@ -26,10 +27,22 @@ import walkingkooka.tree.expression.function.engineering.EngineeringExpressionFu
 import java.math.MathContext;
 import java.util.Locale;
 
-public final class Sample {
+public class TestGwtTest extends GWTTestCase {
 
-    public static void main(final String[] args) {
-        Assertions.assertEquals(
+    @Override
+    public String getModuleName() {
+        return "test.Test";
+    }
+
+    public void testAssertEquals() {
+        assertEquals(
+                1,
+                1
+        );
+    }
+
+    public void testBin2Dec() {
+        assertEquals(
                 "5",
                 EngineeringExpressionFunctions.bin2dec()
                         .apply(

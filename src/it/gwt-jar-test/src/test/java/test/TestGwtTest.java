@@ -20,6 +20,7 @@ package test;
 import com.google.gwt.junit.client.GWTTestCase;
 
 import walkingkooka.collect.list.Lists;
+import walkingkooka.j2cl.locale.LocaleAware;
 import walkingkooka.tree.expression.ExpressionNumberKind;
 import walkingkooka.tree.expression.FakeExpressionEvaluationContext;
 import walkingkooka.tree.expression.function.engineering.EngineeringExpressionFunctions;
@@ -27,6 +28,7 @@ import walkingkooka.tree.expression.function.engineering.EngineeringExpressionFu
 import java.math.MathContext;
 import java.util.Locale;
 
+@LocaleAware
 public class TestGwtTest extends GWTTestCase {
 
     @Override

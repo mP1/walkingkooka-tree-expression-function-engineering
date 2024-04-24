@@ -51,7 +51,7 @@ final class NumberExpressionFunctionBitAndOrXor<C extends ExpressionEvaluationCo
      * Singleton
      */
     private static final NumberExpressionFunctionBitAndOrXor<?> BITAND = new NumberExpressionFunctionBitAndOrXor<>(
-            "bit-and",
+            "bitand",
             (n1, n2) -> n1.and(n2)
     );
 
@@ -66,7 +66,7 @@ final class NumberExpressionFunctionBitAndOrXor<C extends ExpressionEvaluationCo
      * Singleton
      */
     private static final NumberExpressionFunctionBitAndOrXor<?> BITOR = new NumberExpressionFunctionBitAndOrXor<>(
-            "bit-or",
+            "bitor",
             (n1, n2) -> n1.or(n2)
     );
 
@@ -81,7 +81,7 @@ final class NumberExpressionFunctionBitAndOrXor<C extends ExpressionEvaluationCo
      * Singleton
      */
     private static final NumberExpressionFunctionBitAndOrXor<?> BITXOR = new NumberExpressionFunctionBitAndOrXor<>(
-            "bit-xor",
+            "bitxor",
             (n1, n2) -> n1.xor(n2)
     );
 

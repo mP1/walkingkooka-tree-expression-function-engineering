@@ -17,7 +17,7 @@
   -->
 
 <module>
-    <inherits name="walkingkooka.tree.Tree"/>
+    <inherits name="walkingkooka.tree.expression.function.provider.TreeExpressionFunctionProvider"/>
 
     <source path=""/>
 </module>

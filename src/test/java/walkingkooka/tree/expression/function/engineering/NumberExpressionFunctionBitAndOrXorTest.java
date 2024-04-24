@@ -139,7 +139,7 @@ public final class NumberExpressionFunctionBitAndOrXorTest extends NumberExpress
     public void testToStringBitAnd() {
         this.toStringAndCheck(
                 NumberExpressionFunctionBitAndOrXor.bitAnd(),
-                "bit-and"
+                "bitand"
         );
     }
 
@@ -147,7 +147,7 @@ public final class NumberExpressionFunctionBitAndOrXorTest extends NumberExpress
     public void testToStringBitOr() {
         this.toStringAndCheck(
                 NumberExpressionFunctionBitAndOrXor.bitOr(),
-                "bit-or"
+                "bitor"
         );
     }
 
@@ -155,7 +155,7 @@ public final class NumberExpressionFunctionBitAndOrXorTest extends NumberExpress
     public void testToStringBitXor() {
         this.toStringAndCheck(
                 NumberExpressionFunctionBitAndOrXor.bitXor(),
-                "bit-xor"
+                "bitxor"
         );
     }
 

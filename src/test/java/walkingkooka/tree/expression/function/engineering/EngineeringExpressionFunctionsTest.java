@@ -17,7 +17,7 @@
 package walkingkooka.tree.expression.function.engineering;
 
 import org.junit.jupiter.api.Test;
-import walkingkooka.collect.set.Sets;
+import walkingkooka.collect.set.SortedSets;
 import walkingkooka.reflect.JavaVisibility;
 import walkingkooka.reflect.PublicStaticHelperTesting;
 import walkingkooka.text.CaseSensitivity;
@@ -37,12 +37,12 @@ public final class EngineeringExpressionFunctionsTest implements PublicStaticHel
                         .filter(m -> m.getReturnType() == ExpressionFunction.class)
                         .map(Method::getName)
                         .map(n -> n.toLowerCase())
-                        .collect(Collectors.toCollection(Sets::sorted)),
+                        .collect(Collectors.toCollection(SortedSets::tree)),
                 EngineeringExpressionFunctions.expressionFunctionProvider(CaseSensitivity.SENSITIVE)
                         .expressionFunctionInfos()
                         .stream()
                         .map(i -> i.name().value())
-                        .collect(Collectors.toCollection(Sets::sorted))
+                        .collect(Collectors.toCollection(SortedSets::tree))
         );
     }
 

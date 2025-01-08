@@ -51,8 +51,8 @@ final class NumberExpressionFunctionBitAndOrXor<C extends ExpressionEvaluationCo
      * Singleton
      */
     private static final NumberExpressionFunctionBitAndOrXor<?> BITAND = new NumberExpressionFunctionBitAndOrXor<>(
-            "bitand",
-            (n1, n2) -> n1.and(n2)
+        "bitand",
+        (n1, n2) -> n1.and(n2)
     );
 
     /**
@@ -66,8 +66,8 @@ final class NumberExpressionFunctionBitAndOrXor<C extends ExpressionEvaluationCo
      * Singleton
      */
     private static final NumberExpressionFunctionBitAndOrXor<?> BITOR = new NumberExpressionFunctionBitAndOrXor<>(
-            "bitor",
-            (n1, n2) -> n1.or(n2)
+        "bitor",
+        (n1, n2) -> n1.or(n2)
     );
 
     /**
@@ -81,8 +81,8 @@ final class NumberExpressionFunctionBitAndOrXor<C extends ExpressionEvaluationCo
      * Singleton
      */
     private static final NumberExpressionFunctionBitAndOrXor<?> BITXOR = new NumberExpressionFunctionBitAndOrXor<>(
-            "bitxor",
-            (n1, n2) -> n1.xor(n2)
+        "bitxor",
+        (n1, n2) -> n1.xor(n2)
     );
 
     /**
@@ -100,20 +100,20 @@ final class NumberExpressionFunctionBitAndOrXor<C extends ExpressionEvaluationCo
         this.checkParameterCount(parameters);
 
         return this.function.apply(
-                NUMBER1.getOrFail(parameters, 0),
-                NUMBER2.getOrFail(parameters, 1)
+            NUMBER1.getOrFail(parameters, 0),
+            NUMBER2.getOrFail(parameters, 1)
         );
     }
 
     private final BiFunction<ExpressionNumber, ExpressionNumber, ExpressionNumber> function;
 
     private final static ExpressionFunctionParameter<ExpressionNumber> NUMBER1 = ExpressionFunctionParameterName.with("number1")
-            .required(ExpressionNumber.class)
-            .setKinds(ExpressionFunctionParameterKind.CONVERT_EVALUATE_RESOLVE_REFERENCES);
+        .required(ExpressionNumber.class)
+        .setKinds(ExpressionFunctionParameterKind.CONVERT_EVALUATE_RESOLVE_REFERENCES);
 
     private final static ExpressionFunctionParameter<ExpressionNumber> NUMBER2 = ExpressionFunctionParameterName.with("number2")
-            .required(ExpressionNumber.class)
-            .setKinds(ExpressionFunctionParameterKind.CONVERT_EVALUATE_RESOLVE_REFERENCES);
+        .required(ExpressionNumber.class)
+        .setKinds(ExpressionFunctionParameterKind.CONVERT_EVALUATE_RESOLVE_REFERENCES);
 
     @Override
     public List<ExpressionFunctionParameter<?>> parameters(final int count) {
@@ -121,7 +121,7 @@ final class NumberExpressionFunctionBitAndOrXor<C extends ExpressionEvaluationCo
     }
 
     private final static List<ExpressionFunctionParameter<?>> PARAMETERS = Lists.of(
-            NUMBER1,
-            NUMBER2
+        NUMBER1,
+        NUMBER2
     );
 }

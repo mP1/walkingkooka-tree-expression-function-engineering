@@ -36,7 +36,7 @@ abstract class NumberExpressionFunction<C extends ExpressionEvaluationContext> i
     NumberExpressionFunction(final String name) {
         super();
         this.name = Optional.of(
-                ExpressionFunctionName.with(name)
+            ExpressionFunctionName.with(name)
         );
     }
 
@@ -63,7 +63,7 @@ abstract class NumberExpressionFunction<C extends ExpressionEvaluationContext> i
     @Override
     public final String toString() {
         return this.name()
-                .get()
-                .toString();
+            .get()
+            .toString();
     }
 }

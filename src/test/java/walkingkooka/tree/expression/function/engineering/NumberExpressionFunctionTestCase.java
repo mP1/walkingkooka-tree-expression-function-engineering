@@ -36,9 +36,9 @@ public abstract class NumberExpressionFunctionTestCase<F extends ExpressionFunct
 
     final void apply2(final Number... parameters) {
         this.createBiFunction()
-                .apply(parameters(parameters),
-                        this.createContext()
-                );
+            .apply(parameters(parameters),
+                this.createContext()
+            );
     }
 
     @Override
@@ -46,12 +46,12 @@ public abstract class NumberExpressionFunctionTestCase<F extends ExpressionFunct
                                      final List<Object> parameters,
                                      final ExpressionNumber result) {
         this.applyAndCheck2(
-                function,
-                parameters.stream()
-                        .map(i -> KIND.create((Number) i))
-                        .collect(Collectors.toList()),
-                this.createContext(),
-                result
+            function,
+            parameters.stream()
+                .map(i -> KIND.create((Number) i))
+                .collect(Collectors.toList()),
+            this.createContext(),
+            result
         );
     }
 

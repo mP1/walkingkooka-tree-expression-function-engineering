@@ -38,10 +38,10 @@ public abstract class StringExpressionFunctionTestCase<F extends ExpressionFunct
                               final List<Object> parameters,
                               final String result) {
         this.applyAndCheck2(
-                function,
-                parameters,
-                this.createContext(),
-                result
+            function,
+            parameters,
+            this.createContext(),
+            result
         );
     }
 

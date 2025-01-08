@@ -30,45 +30,45 @@ public final class Sample {
 
     public static void main(final String[] args) {
         Assertions.assertEquals(
-                "5",
-                EngineeringExpressionFunctions.bin2dec()
-                        .apply(
-                                Lists.of(
-                                        "101"
-                                ),
-                                new FakeExpressionEvaluationContext() {
+            "5",
+            EngineeringExpressionFunctions.bin2dec()
+                .apply(
+                    Lists.of(
+                        "101"
+                    ),
+                    new FakeExpressionEvaluationContext() {
 
-                                    @Override
-                                    public Locale locale() {
-                                        return Locale.forLanguageTag("EN-AU");
-                                    }
+                        @Override
+                        public Locale locale() {
+                            return Locale.forLanguageTag("EN-AU");
+                        }
 
-                                    @Override
-                                    public ExpressionNumberKind expressionNumberKind() {
-                                        return ExpressionNumberKind.BIG_DECIMAL;
-                                    }
+                        @Override
+                        public ExpressionNumberKind expressionNumberKind() {
+                            return ExpressionNumberKind.BIG_DECIMAL;
+                        }
 
-                                    @Override
-                                    public MathContext mathContext() {
-                                        return MathContext.DECIMAL32;
-                                    }
+                        @Override
+                        public MathContext mathContext() {
+                            return MathContext.DECIMAL32;
+                        }
 
-                                    @Override
-                                    public char decimalSeparator() {
-                                        return '.';
-                                    }
+                        @Override
+                        public char decimalSeparator() {
+                            return '.';
+                        }
 
-                                    @Override
-                                    public char negativeSign() {
-                                        return '-';
-                                    }
+                        @Override
+                        public char negativeSign() {
+                            return '-';
+                        }
 
-                                    @Override
-                                    public char positiveSign() {
-                                        return '+';
-                                    }
-                                }
-                        )
+                        @Override
+                        public char positiveSign() {
+                            return '+';
+                        }
+                    }
+                )
         );
     }
 }

@@ -37,4 +37,5 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({TestGwtTest.class})
-public class TestGwtSuite {}
+public class TestGwtSuite {
+}

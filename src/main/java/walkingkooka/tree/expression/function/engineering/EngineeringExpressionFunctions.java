@@ -38,28 +38,28 @@ public final class EngineeringExpressionFunctions implements PublicStaticHelper 
      */
     public static ExpressionFunctionProvider expressionFunctionProvider(final CaseSensitivity nameCaseSensitivity) {
         return ExpressionFunctionProviders
-                .basic(
+            .basic(
                 Url.parseAbsolute("https://github.com/mP1/walkingkooka-tree-expression-function-engineering/"),
-                        nameCaseSensitivity,
+                nameCaseSensitivity,
                 Sets.of(
-                        bin2dec(),
-                        bin2hex(),
-                        bin2oct(),
-                        bitAnd(),
-                        bitOr(),
-                        bitXor(),
-                        dec2bin(),
-                        dec2hex(),
-                        dec2oct(),
-                        delta(),
-                        hex2bin(),
-                        hex2dec(),
-                        hex2oct(),
-                        oct2bin(),
-                        oct2dec(),
-                        oct2hex()
+                    bin2dec(),
+                    bin2hex(),
+                    bin2oct(),
+                    bitAnd(),
+                    bitOr(),
+                    bitXor(),
+                    dec2bin(),
+                    dec2hex(),
+                    dec2oct(),
+                    delta(),
+                    hex2bin(),
+                    hex2dec(),
+                    hex2oct(),
+                    oct2bin(),
+                    oct2dec(),
+                    oct2hex()
                 )
-        );
+            );
     }
 
     /**

@@ -29,18 +29,18 @@ public final class NumberExpressionFunctionBitAndOrXorTest extends NumberExpress
     @Test
     public void testBitAndWholeNumbers() {
         this.bitAndAndCheck(
-                3,
-                6,
-                3 & 6
+            3,
+            6,
+            3 & 6
         );
     }
 
     @Test
     public void testBitAndDecimals() {
         this.bitAndAndCheck(
-                3.5,
-                6.5,
-                3 & 6
+            3.5,
+            6.5,
+            3 & 6
         );
     }
 
@@ -48,10 +48,10 @@ public final class NumberExpressionFunctionBitAndOrXorTest extends NumberExpress
                                 final Number value2,
                                 final Number expected) {
         this.applyAndCheck3(
-                NumberExpressionFunctionBitAndOrXor.bitAnd(),
-                value1,
-                value2,
-                expected
+            NumberExpressionFunctionBitAndOrXor.bitAnd(),
+            value1,
+            value2,
+            expected
         );
     }
 
@@ -60,18 +60,18 @@ public final class NumberExpressionFunctionBitAndOrXorTest extends NumberExpress
     @Test
     public void testBitOrWholeNumbers() {
         this.bitOrAndCheck(
-                3,
-                6,
-                3 | 6
+            3,
+            6,
+            3 | 6
         );
     }
 
     @Test
     public void testBitOrDecimals() {
         this.bitOrAndCheck(
-                3.5,
-                6.5,
-                3 | 6
+            3.5,
+            6.5,
+            3 | 6
         );
     }
 
@@ -79,10 +79,10 @@ public final class NumberExpressionFunctionBitAndOrXorTest extends NumberExpress
                                final Number value2,
                                final Number expected) {
         this.applyAndCheck3(
-                NumberExpressionFunctionBitAndOrXor.bitOr(),
-                value1,
-                value2,
-                expected
+            NumberExpressionFunctionBitAndOrXor.bitOr(),
+            value1,
+            value2,
+            expected
         );
     }
 
@@ -91,18 +91,18 @@ public final class NumberExpressionFunctionBitAndOrXorTest extends NumberExpress
     @Test
     public void testBitXorWholeNumbers() {
         this.bitXorAndCheck(
-                3,
-                6,
-                3 ^ 6
+            3,
+            6,
+            3 ^ 6
         );
     }
 
     @Test
     public void testBitXorDecimals() {
         this.bitXorAndCheck(
-                3.5,
-                6.5,
-                3 ^ 6
+            3.5,
+            6.5,
+            3 ^ 6
         );
     }
 
@@ -110,10 +110,10 @@ public final class NumberExpressionFunctionBitAndOrXorTest extends NumberExpress
                                 final Number value2,
                                 final Number expected) {
         this.applyAndCheck3(
-                NumberExpressionFunctionBitAndOrXor.bitXor(),
-                value1,
-                value2,
-                expected
+            NumberExpressionFunctionBitAndOrXor.bitXor(),
+            value1,
+            value2,
+            expected
         );
     }
     // helper...........................................................................................................
@@ -123,13 +123,13 @@ public final class NumberExpressionFunctionBitAndOrXorTest extends NumberExpress
                                 final Number value2,
                                 final Number expected) {
         this.applyAndCheck(
-                function,
-                Lists.of(
-                        KIND.create(value1),
-                        KIND.create(value2)
-                ),
-                this.createContext(),
-                KIND.create(expected)
+            function,
+            Lists.of(
+                KIND.create(value1),
+                KIND.create(value2)
+            ),
+            this.createContext(),
+            KIND.create(expected)
         );
     }
 
@@ -138,24 +138,24 @@ public final class NumberExpressionFunctionBitAndOrXorTest extends NumberExpress
     @Test
     public void testToStringBitAnd() {
         this.toStringAndCheck(
-                NumberExpressionFunctionBitAndOrXor.bitAnd(),
-                "bitand"
+            NumberExpressionFunctionBitAndOrXor.bitAnd(),
+            "bitand"
         );
     }
 
     @Test
     public void testToStringBitOr() {
         this.toStringAndCheck(
-                NumberExpressionFunctionBitAndOrXor.bitOr(),
-                "bitor"
+            NumberExpressionFunctionBitAndOrXor.bitOr(),
+            "bitor"
         );
     }
 
     @Test
     public void testToStringBitXor() {
         this.toStringAndCheck(
-                NumberExpressionFunctionBitAndOrXor.bitXor(),
-                "bitxor"
+            NumberExpressionFunctionBitAndOrXor.bitXor(),
+            "bitxor"
         );
     }
 

@@ -32,43 +32,43 @@ public final class BooleanExpressionFunctionDeltaTest extends BooleanExpressionF
     @Test
     public void testNonNumberParameterFails() {
         assertThrows(
-                ClassCastException.class,
-                () -> {
-                    this.apply2(
-                            "Not-a-number",
-                            KIND.create(2)
-                    );
-                }
+            ClassCastException.class,
+            () -> {
+                this.apply2(
+                    "Not-a-number",
+                    KIND.create(2)
+                );
+            }
         );
     }
 
     @Test
     public void testEqual() {
         this.applyAndCheck2(
-                Lists.of(
-                        KIND.create(125.5),
-                        KIND.create(125.5)
-                ),
-                true
+            Lists.of(
+                KIND.create(125.5),
+                KIND.create(125.5)
+            ),
+            true
         );
     }
 
     @Test
     public void testDifferent() {
         this.applyAndCheck2(
-                Lists.of(
-                        KIND.create(123),
-                        KIND.create(456)
-                ),
-                false
+            Lists.of(
+                KIND.create(123),
+                KIND.create(456)
+            ),
+            false
         );
     }
 
     @Test
     public void testToString() {
         this.toStringAndCheck(
-                this.createBiFunction(),
-                "delta"
+            this.createBiFunction(),
+            "delta"
         );
     }
 

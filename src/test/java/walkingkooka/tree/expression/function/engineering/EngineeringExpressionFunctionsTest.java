@@ -33,16 +33,16 @@ public final class EngineeringExpressionFunctionsTest implements PublicStaticHel
     @Test
     public void testExpressionFunctionProvider() {
         this.checkEquals(
-                Arrays.stream(EngineeringExpressionFunctions.class.getDeclaredMethods())
-                        .filter(m -> m.getReturnType() == ExpressionFunction.class)
-                        .map(Method::getName)
-                        .map(n -> n.toLowerCase())
-                        .collect(Collectors.toCollection(SortedSets::tree)),
-                EngineeringExpressionFunctions.expressionFunctionProvider(CaseSensitivity.SENSITIVE)
-                        .expressionFunctionInfos()
-                        .stream()
-                        .map(i -> i.name().value())
-                        .collect(Collectors.toCollection(SortedSets::tree))
+            Arrays.stream(EngineeringExpressionFunctions.class.getDeclaredMethods())
+                .filter(m -> m.getReturnType() == ExpressionFunction.class)
+                .map(Method::getName)
+                .map(n -> n.toLowerCase())
+                .collect(Collectors.toCollection(SortedSets::tree)),
+            EngineeringExpressionFunctions.expressionFunctionProvider(CaseSensitivity.SENSITIVE)
+                .expressionFunctionInfos()
+                .stream()
+                .map(i -> i.name().value())
+                .collect(Collectors.toCollection(SortedSets::tree))
         );
     }
 

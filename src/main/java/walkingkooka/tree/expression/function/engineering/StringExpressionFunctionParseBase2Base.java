@@ -145,11 +145,11 @@ final class StringExpressionFunctionParseBase2Base<C extends ExpressionEvaluatio
     }
 
     private final static ExpressionFunctionParameter<String> FROM = ExpressionFunctionParameterName.with("from")
-            .required(String.class)
-            .setKinds(ExpressionFunctionParameterKind.CONVERT_EVALUATE_RESOLVE_REFERENCES);
+        .required(String.class)
+        .setKinds(ExpressionFunctionParameterKind.CONVERT_EVALUATE_RESOLVE_REFERENCES);
 
     private final static List<ExpressionFunctionParameter<?>> PARAMETERS = Lists.of(
-            FROM
+        FROM
     );
 
     @Override
@@ -160,13 +160,13 @@ final class StringExpressionFunctionParseBase2Base<C extends ExpressionEvaluatio
         final ExpressionNumberKind kind = context.expressionNumberKind();
 
         final ExpressionNumber parsed = kind.parseWithBase(
-                FROM.getOrFail(parameters, 0),
-                this.parseWithBase,
-                context
+            FROM.getOrFail(parameters, 0),
+            this.parseWithBase,
+            context
         );
 
         return parsed.toStringWithBase(
-                kind.create(formatWithBase)
+            kind.create(formatWithBase)
         ).toLowerCase(context.locale());
     }
 

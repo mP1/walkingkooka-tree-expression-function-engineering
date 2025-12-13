@@ -100,8 +100,8 @@ final class NumberExpressionFunctionBitAndOrXor<C extends ExpressionEvaluationCo
         this.checkParameterCount(parameters);
 
         return this.function.apply(
-            NUMBER1.getOrFail(parameters, 0, context),
-            NUMBER2.getOrFail(parameters, 1, context)
+            NUMBER1.getOrFail(parameters, 0),
+            NUMBER2.getOrFail(parameters, 1)
         );
     }
 

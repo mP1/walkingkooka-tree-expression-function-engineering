@@ -160,7 +160,7 @@ final class StringExpressionFunctionParseBase2Base<C extends ExpressionEvaluatio
         final ExpressionNumberKind kind = context.expressionNumberKind();
 
         final ExpressionNumber parsed = kind.parseWithBase(
-            FROM.getOrFail(parameters, 0),
+            FROM.getOrFail(parameters, 0, context),
             this.parseWithBase,
             context
         );
